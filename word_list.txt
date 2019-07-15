@@ -1,0 +1,5 @@
+Create a Python-script or IPython-notebook which lists all words occuring in a text.
+The script should read a sentence.
+It should create a list with all the occuring words in alphabetical order and print the content of this list in oneline. The words in the output should be separated by semi-colon.
+Every word should be printed only once, even if it occurs multiple times in the input.
+The words in the input should be converted to lower case before being processed, so that differences in upperand lower case are ignored
