@@ -13,3 +13,4 @@ These files are inside the directory:
 	word_list.txt
 	Word_occurance.py
 	Alphabetical_word_list.py
+	exercises_matplotlib.py

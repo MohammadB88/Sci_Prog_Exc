@@ -5,7 +5,8 @@ Created on Thu Jun 20 22:06:45 2019
 @author: mb1988
 """
 while True:    
-    inp_num = int(input('How many numbers in the Fibonacci Sequence do you want me to print (an integer number more than 0): '))
+    inp_num = int(input("""How many numbers in the Fibonacci Sequence 
+    do you want me to print (an integer number more than 0): """))
     if inp_num == 0:
         print('You entered "0". Please enter an integer number more than 0.')
         continue
