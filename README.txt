@@ -16,3 +16,5 @@ These files are inside the directory:
 	exercises_matplotlib.py
 	schroedinger.py
 	linesolver.py
+	
+	
