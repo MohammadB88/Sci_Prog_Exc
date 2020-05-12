@@ -27,6 +27,8 @@ elm = Fibonacci_Sequence(inp_num)
 field_width = len(str(abs(elm[inp_num-1])))
 print(field_width)
 field_width_format = '{:>'+'{}'.format(field_width)+'}'
+# an easier string formating
+field_width_format = '{{:{:d}d}} {{:{:d}d}}'.format(index_width, field_width)
 
 #print(elm)
 if inp_num == 0:
