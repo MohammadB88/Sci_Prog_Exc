@@ -24,5 +24,6 @@ sorted_lower_word.sort()
 print('\nHere is a list of all the word in that sentence in lower case: \n', lower_word)
 
 print('\nHere is what the excercise is asking for: ')
-for sorted_itr in sorted_lower_word:
-    print(sorted_itr+'; ', end='')
+print('; '.join(sorted_lower_word))
+#for sorted_itr in sorted_lower_word:
+#    print(sorted_itr+'; ', end='')
