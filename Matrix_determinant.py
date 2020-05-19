@@ -70,12 +70,14 @@ def determinant(mtx):
     submtx = np.empty((nn - 1, nn - 1), dtype=float)
     det = 0.0   
     for ii in range(nn):
+        sign = (-1)**ii
 #        print('ii: ', ii )
-        submtx[:, :ii] = mtx[1:, 0:ii]
+        submtx[:, :ii] = mtx[1:, :ii]
         submtx[:, ii:] = mtx[1:, ii + 1:]
 #        print(submtx[:, :ii], '\n', submtx[:, ii:])
+        print(submtx)
 #        print(mtx[0, ii])        
-        det += (-1)**ii * mtx[0, ii] * determinant(submtx)
+        det += sign * mtx[0, ii] * determinant(submtx)
 #        print(det)
     return det
 
