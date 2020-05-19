@@ -35,17 +35,25 @@ def Fibonacci_Sequence(inp_num, order=2):
     return:
         List of Fibonacci-numbers
     """
-    elm_fibo = []
-#    print(inp_num,order)
-    for N in range(order):    
-        elm_fibo.append(1)
-#    print(elm_fibo)
-    elm_fibo.append(order)
+   #elm_fibo = []
+   # print(inp_num,order)
+   # for N in range(order):    
+   #     elm_fibo.append(1)
+   # print(elm_fibo)
+   # elm_fibo.append(order)
+   # for i in range(order+1,inp_num):
+   #    fibo = 2 * elm_fibo[i - 1] - elm_fibo[i - order - 1]
+   #     print(elm[i - order - 1])
+   #     elm_fibo.append(fibo)
+   # print(elm_fibo)
+   # return elm_fibo
+    elm_fibo = np.empty((inp_num,), dtype=int)
+    elm_fibo[0 : min(inp_num, order)] = 1
+    if inp_num <= order:
+        return elm_fibo
+    elm_fibo[order] = order
     for i in range(order+1,inp_num):
-        fibo = 2 * elm_fibo[i - 1] - elm_fibo[i - order - 1]
-#        print(elm[i - order - 1])
-        elm_fibo.append(fibo)
-#    print(elm_fibo)
+            elm_fibo[i] = 2 * elm_fibo[i - 1] - elm_fibo[i - order - 1]
     return elm_fibo
 
 #Fibonacci_Sequence(inp_num, inp_order)
