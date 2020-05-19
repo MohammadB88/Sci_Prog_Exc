@@ -35,23 +35,23 @@ def Fibonacci_Sequence(inp_num, order=2):
     return:
         List of Fibonacci-numbers
     """
-    elm = []
+    elm_fibo = []
 #    print(inp_num,order)
     for N in range(order):    
-        elm.append(1)
-#    print(elm)
-    elm.append(order)
+        elm_fibo.append(1)
+#    print(elm_fibo)
+    elm_fibo.append(order)
     for i in range(order+1,inp_num):
-        new_elm = 2 * elm[i - 1] - elm[i - order - 1]
+        fibo = 2 * elm_fibo[i - 1] - elm_fibo[i - order - 1]
 #        print(elm[i - order - 1])
-        elm.append(new_elm)
-#    print(elm)
-    return elm
+        elm_fibo.append(fibo)
+#    print(elm_fibo)
+    return elm_fibo
 
 #Fibonacci_Sequence(inp_num, inp_order)
-elm = Fibonacci_Sequence(inp_num, inp_order)
+fibbos = Fibonacci_Sequence(inp_num, inp_order)
 
-field_width = len(str(abs(elm[inp_num-1])))
+field_width = len(str(abs(fibbos[inp_num-1])))
 #print(field_width)
 field_width_format = '{:>'+'{}'.format(field_width)+'}'
 
@@ -60,4 +60,4 @@ if inp_num == 0:
     print(field_width_format.format(0), 'with index number', 1)
 else:
     for i in range(inp_num):
-        print(field_width_format.format(elm[i]), 'with index number', i+1)
+        print(field_width_format.format(fibbos[i]), 'with index number', i+1)
