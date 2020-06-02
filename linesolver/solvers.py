@@ -14,5 +14,14 @@ def gaussian_eliminate(aa, bb):
         if the equations are linearly dependent.
     """
     nn = aa.shape[0]
-    xx = np.zeros((nn,), dtype=float)
+    for ii in range(nn-1):
+        for jj in range(ii+1, nn):
+            coeff = -aa[jj, ii] / aa[ii, ii]
+            aa[jj, ii:] += coeff * aa[ii, ii:]
+            bb[jj] += coeff * bb[ii]
+            
+    #xx = np.zeros((nn,), dtype=float)
+    xx = np.empty((nn,), dtype=float)
+    for ii in range(nn-1, -1, -1):
+        xx[ii] = (bb[ii] - np.dot(aa[ii, ii+1:], x[ii+1:])) / aa[ii, ii]
     return xx
